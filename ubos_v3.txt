@@ -154,7 +154,7 @@ local function createAdminUI()
 ";speed all inf",
 ";cmdbar others",
 ";speed all inf",
-";r6 all"
+";r6 all",
 ";hipheight all inf",
 ";speed all inf",
 ";cmdbar others",
