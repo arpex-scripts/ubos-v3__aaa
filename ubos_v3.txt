@@ -1,0 +1,321 @@
+-- ubos v3 backup
+-- please store carefully
+
+print('Loaded UBOS-V3, reset to get the UI!')
+print('Last updated: January. 5th, 2025')
+print('You are using the "Free HeadAdmin" version of UBOS.')
+print('https://discord.gg/gm4RzQu8AZ')
+
+local function createAdminUI()
+    local screenGui = Instance.new("ScreenGui")
+    screenGui.Name = "AdminUI"
+    screenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+    local frame = Instance.new("Frame")
+    frame.Size = UDim2.new(0, 400, 0, 600)
+    frame.Position = UDim2.new(0.5, -200, 0, -600)
+    frame.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+    frame.BorderSizePixel = 0
+    frame.Parent = screenGui
+
+    local corner = Instance.new("UICorner")
+    corner.CornerRadius = UDim.new(0, 12)
+    corner.Parent = frame
+
+    game:GetService("TweenService"):Create(
+        frame,
+        TweenInfo.new(1.5, Enum.EasingStyle.Bounce, Enum.EasingDirection.Out),
+        {Position = UDim2.new(0.5, -200, 0.5, -300)}
+    ):Play()
+
+    local titleLabel = Instance.new("TextLabel")
+    titleLabel.Size = UDim2.new(0, 400, 0, 50)
+    titleLabel.Position = UDim2.new(0, 0, 0, 0)
+    titleLabel.BackgroundColor3 = Color3.fromRGB(0, 150, 0)
+    titleLabel.Text = "            UBOS V3 - Admin Panel"
+    titleLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+    titleLabel.Font = Enum.Font.SourceSansBold
+    titleLabel.TextSize = 24
+    titleLabel.TextXAlignment = Enum.TextXAlignment.Center
+    titleLabel.Parent = frame
+
+    local function createButton(parent, text, position, color, onClick)
+        local button = Instance.new("TextButton")
+        button.Size = UDim2.new(0, 250, 0, 50)
+        button.Position = position
+        button.BackgroundColor3 = color
+        button.Text = text
+        button.TextColor3 = Color3.fromRGB(255, 255, 255)
+        button.Font = Enum.Font.SourceSansBold
+        button.TextSize = 20
+        button.Parent = parent
+
+        local corner = Instance.new("UICorner")
+        corner.CornerRadius = UDim.new(0, 8)
+        corner.Parent = button
+
+        button.MouseButton1Click:Connect(onClick)
+        return button
+    end
+
+    createButton(frame, "fix server", UDim2.new(0.5, -125, 0, 70), Color3.fromRGB(70, 130, 180), function()
+        local commands = {
+            ";fogend 1500000",
+            ";showguis all",
+            ";undisco",
+            ";unblur all",
+            ";unmusic",
+            ";loadmap",
+			";unfreeze all",
+			";unjail all",
+			";music"
+        }
+        for _, cmd in ipairs(commands) do
+            game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(cmd)
+        end
+    end)
+
+    local destroyButton = Instance.new("TextButton")
+    destroyButton.Size = UDim2.new(0, 250, 0, 50)
+    destroyButton.Position = UDim2.new(0.5, -125, 0, 140)
+    destroyButton.BackgroundColor3 = Color3.fromRGB(255, 69, 0)
+    destroyButton.Text = "destroy server"
+    destroyButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+    destroyButton.Font = Enum.Font.SourceSansBold
+    destroyButton.TextSize = 20
+    destroyButton.Parent = frame
+
+    local destroyCorner = Instance.new("UICorner")
+    destroyCorner.CornerRadius = UDim.new(0, 8)
+    destroyCorner.Parent = destroyButton
+
+    destroyButton.MouseButton1Click:Connect(function()
+        local commands = {
+";speed all inf",
+";music 7764369437",
+";pitch 3",
+";volume inf",
+";titledg all join ubos",
+";cmdbar others",
+";createTeam blue LOL!",
+";createTeam red LOL!",
+";createTeam purple LOL!",
+";createTeam white LOL!",
+";speed all inf",
+";createTeam gray LOL!",
+";createTeam black LOL!",
+";createTeam orange LOL!",
+";createTeam darkGreen LOL!",
+";speed all inf",
+";createTeam darkBlue LOL!",
+";createTeam yel LOL!",
+";speed all inf",
+";createTeam green LOL!",
+";cmdbar others",
+";r6 all",
+";speed all inf",
+";speed all inf",
+";paint all red",
+";speed all inf",
+";reflectance all inf",
+";cmdbar others",
+";speed all inf",
+";noclip others inf",
+";speed others inf",
+";chatlogs others",
+";chatlogs others",
+";speed all inf",
+";speed all inf",
+";chatlogs others",
+";speed all inf",
+";neon all",
+";jail all",
+";speed all inf",
+";fire all",
+";cmdbar others",
+";speed all inf",
+";speed all inf",
+";smoke all",
+";speed all inf",
+";hipheight all 99999",
+";speed all inf",
+";warp all",
+";speed all inf",
+";blur all inf",
+";speed all inf",
+";say all Ubos V3 on TOP!",
+";volume 99999999",
+";notice all Server Gone!✔",
+";fogEnd inf",
+";speed all inf",
+";fogStart 1",
+";fogColor black",
+";time 24",
+";speed all inf",
+";speed all inf",
+";health all 0",
+";speed all inf",
+";cmdbar others",
+";speed all inf",
+";r6 all"
+";hipheight all inf",
+";speed all inf",
+";cmdbar others",
+";speed all inf",
+";chatlogs others",
+";speed all inf",
+";chatlogs others",
+";speed all inf",
+";speed all inf",
+";chatlogs others",
+";speed all inf",
+";health all 0",
+";speed all inf",
+";titlebk all Join Ubos Today!",
+";speed all inf",
+";unfly all",
+";speed all inf",
+";speed all inf",
+";unfly2 all",
+";speed all inf",
+";speed all inf",
+";cmdbar others",
+";speed all inf",
+";noclip all inf",
+";fly all inf",
+";chatlogs others",
+";speed all inf",
+";cmdbar all",
+";speed all inf",
+";cmdbar others",
+";speed all inf",
+";hideguis others",
+";jumppower all inf",
+";jump all",
+";speed all inf",
+";speed all inf",
+";r6 all",
+";hipheight all inf",
+";spin all inf",
+";titler all ubos is goated",
+";cmdbar others",
+";speed all inf",
+";savemap",
+";speed all inf",
+";speed all inf",
+";notice all ✅did you pray today",
+";loadmap",
+";lockMap",
+";speed all inf",
+";speed all inf",
+";notice all epic!",
+";unfly all",
+";noclip all inf",
+";notice all Join Team Ubos Today!"
+        }
+        for _, cmd in ipairs(commands) do
+            game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(cmd)
+			wait(0.10)
+        end
+    end)
+
+    createButton(frame, "unjail all", UDim2.new(0.5, -125, 0, 280), Color3.fromRGB(50, 205, 50), function()
+        game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(";unjail all")
+    end)
+
+    createButton(frame, "make others disappear", UDim2.new(0.5, -125, 0, 210), Color3.fromRGB(255, 165, 0), function()
+        game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(";speed others inf")
+    end)
+
+    local loopRunning = false
+    local loopButton = createButton(frame, "loop make others disappear [broken]", UDim2.new(0.5, -125, 0, 350), Color3.fromRGB(255, 255, 0), function()
+        if not loopRunning then
+            loopRunning = true
+            loopButton.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+            loopButton.Text = "Stop Loop"
+            while loopRunning do
+                game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(";speed others inf")
+                wait(6)
+            end
+        else
+            loopRunning = false
+            loopButton.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
+            loopButton.Text = "loop make others disappear [broken]"
+        end
+    end)
+
+    local stopButton = createButton(frame, "stop others disappearing", UDim2.new(0.5, -125, 0, 420), Color3.fromRGB(255, 0, 0), function()
+        loopRunning = false
+        loopButton.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
+        loopButton.Text = "loop make others disappear"
+    end)
+
+    createButton(frame, "get op gear", UDim2.new(0.5, -125, 0, 490), Color3.fromRGB(0, 255, 255), function()
+        local gearCommands = {
+            ";gear me 115377964",
+            ";gear me 212296936",
+            ";gear me 68848741",
+            ";gear me 158069180",
+            ";gear me 346686597",
+			";btools me"
+        }
+        for _, cmd in ipairs(gearCommands) do
+            game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(cmd)
+        end
+    end)
+
+    local closeButton = Instance.new("TextButton")
+    closeButton.Size = UDim2.new(0, 40, 0, 40)
+    closeButton.Position = UDim2.new(1, -45, 0, 5)
+    closeButton.BackgroundColor3 = Color3.fromRGB(200, 0, 0)
+    closeButton.Text = "X"
+    closeButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+    closeButton.Font = Enum.Font.SourceSansBold
+    closeButton.TextSize = 20
+    closeButton.Parent = frame
+
+    local closeCorner = Instance.new("UICorner")
+    closeCorner.CornerRadius = UDim.new(0, 8)
+    closeCorner.Parent = closeButton
+
+    closeButton.MouseButton1Click:Connect(function()
+        screenGui:Destroy()
+    end)
+
+    local dragToggle = nil
+    local dragSpeed = 0.25
+    local dragInput = nil
+    local dragStart = nil
+    local startPos = nil
+
+    frame.InputBegan:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseButton1 then
+            dragToggle = true
+            dragStart = input.Position
+            startPos = frame.Position
+        end
+    end)
+
+    frame.InputEnded:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseButton1 then
+            dragToggle = false
+        end
+    end)
+
+    frame.InputChanged:Connect(function(input)
+        if dragToggle and input.UserInputType == Enum.UserInputType.MouseMovement then
+            local delta = input.Position - dragStart
+            frame.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+        end
+    end)
+end
+
+game.Players.LocalPlayer.CharacterAdded:Connect(function()
+    game.Players.LocalPlayer:WaitForChild("PlayerGui")
+    createAdminUI()
+end)
+--[[
+
+Ubos V3 - Free HeadAdmin
+
+--]]
