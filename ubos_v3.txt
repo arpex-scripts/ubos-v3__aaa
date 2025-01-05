@@ -1,6 +1,3 @@
--- ubos v3 backup
--- please store carefully
-
 print('Loaded UBOS-V3, reset to get the UI!')
 print('Last updated: January. 5th, 2025')
 print('You are using the "Free HeadAdmin" version of UBOS.')
