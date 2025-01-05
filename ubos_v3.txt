@@ -311,8 +311,3 @@ game.Players.LocalPlayer.CharacterAdded:Connect(function()
     game.Players.LocalPlayer:WaitForChild("PlayerGui")
     createAdminUI()
 end)
---[[
-
-Ubos V3 - Free HeadAdmin
-
---]]
